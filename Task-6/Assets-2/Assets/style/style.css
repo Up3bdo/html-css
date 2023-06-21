@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Tinos', serif;
+    background-color: #000000;
+}
+
+.main{
+    overflow: hidden ;
+    position: relative;
+    height: 100vh;
+}
+
+.main video{
+    width: 100%;
+}
+
+.main::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #16a59430;
+}
+
+.scew{
+    display: flex;
+    width: 65%;
+    height: 100%;
+    background-color: #000000d9;
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: skewX(-8deg);
+    transform-origin: top right;
+    z-index: 5;
+    /* text-align: center; */
+}
+
+.txt{
+    width: 80%;
+    margin: auto;
+    /* background-color: aqua; */
+    transform: skew(8deg);
+    text-align: center;
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    flex-flow:column wrap ;
+}
+
+.txt h1{
+    font-size: 4rem;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.txt p{
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+.txt-input{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-flow:row wrap;
+    gap: 1rem;
+}
+
+.txt-input input{
+    outline: 0;
+    padding: 1rem 2rem;
+}
+
+.txt-input .btn{
+    background-color: #1D3B3B;
+    color: white;
+    padding: 1rem ;
+}
+
+.divIcons{
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    gap: 1rem;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+}
+
+.icons{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #000000;
+    position: relative;
+}
+
+.icons:hover{
+    background-color: #262626;
+    cursor: pointer;
+}
+
+.icons i{
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
+
+@media(max-width:992px) {
+    .main video{
+    width: fit-content;
+    }
+    .scew{
+        width: 100%;
+        height: fit-content;
+        transform: none;
+        display: flex;
+    }
+    .txt{
+        transform: none;
+        margin: 2rem auto 1rem;
+    }
+    .txt h1{
+        font-size: 2rem;
+    }
+    .txt p{
+        font-size: 1rem;
+    }
+    .divIcons{
+        width: 50%;
+        position: absolute;
+        top: 85%;
+        left: 35%;
+        flex-flow: row;
+    }
+}
+
+@media(max-width:768px){
+    .txt{
+        margin: 2rem auto 1rem;
+    }
+    .txt h1{
+        font-size: 1.5rem;
+        padding: 0 !important;
+    }
+    .txt p {
+        font-size: smaller;
+        padding: 0 !important;
+    }
+}
+
+@media(max-width:500px){
+    .divIcons{
+        width: 50%;
+        position: absolute;
+        top: 85%;
+        left: 25%;
+        flex-flow: row;
+    }
+}
+
+@media(max-width:420px){
+    .txt-input button{
+        width: 100%;
+    }
+    .txt-input input{
+        width: 100%;
+    }
+    .divIcons{
+        width: 60%;
+        position: absolute;
+        top: 85%;
+        left: 20%;
+        flex-flow: row;
+    }
+}
